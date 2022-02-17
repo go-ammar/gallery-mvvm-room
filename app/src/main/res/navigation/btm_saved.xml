@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btm_saved"
+    app:startDestination="@+id/savedFragment">
+
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.galleryapplication.ui.fragments.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved">
+        <action
+            android:id="@+id/action_savedFragment_to_imageFragment2"
+            app:destination="@id/imageFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imageFragment2"
+        android:name="com.example.galleryapplication.ui.fragments.SavedImageFragment"
+        android:label="ImageFragment">
+
+        <argument android:name="url"
+            app:argType="string" />
+        <argument android:name="id"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

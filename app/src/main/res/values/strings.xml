@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GalleryApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="what_image">What Image would you like to see?</string>
+    <string name="search">search</string>
+    <string name="btm_nav_label_home">Home</string>
+    <string name="btm_nav_label_saved">Saved</string>
+</resources>

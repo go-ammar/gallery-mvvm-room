@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.fragments.HomeFragment">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/MaterialCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:elevation="@dimen/margin_medium"
+                style="Theme.GalleryApplicatoin"
+                app:cardCornerRadius="@dimen/margin_small"
+                app:cardElevation="@dimen/margin_medium"
+                app:layout_constraintEnd_toStartOf="@id/darkMode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchView"
+                        style="@style/text_input_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:queryBackground="@android:color/transparent"
+                        app:queryHint="What do you want to see"
+                        app:searchHintIcon="@null"
+                        app:searchIcon="@drawable/ic_icon_search2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/darkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/MaterialCardView"
+                app:layout_constraintBottom_toBottomOf="@id/MaterialCardView"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/margin_medium"
+                android:clipToPadding="true"
+                android:foregroundGravity="top"
+                android:layoutAnimation="@anim/layout_animation"
+                android:paddingBottom="@dimen/margin_medium"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MaterialCardView"
+                app:spanCount="2"
+                tools:listitem="@layout/item_images" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

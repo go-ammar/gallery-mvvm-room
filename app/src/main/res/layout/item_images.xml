@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="hit"
+            type="com.example.galleryapplication.models.Hit" />
+
+    </data>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:transitionName="@{hit.webformatURL}"
+            android:scaleType="fitXY"
+            loadUrl="@{hit.webformatURL}"
+            singleImage="@{true}"
+            android:layout_margin="1dp"
+            />
+
+</layout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_input_style">
+        <![CDATA[<style name="text_input_style" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">]]></style>
+</resources>
